@@ -41,6 +41,7 @@ body{
 }
 
 .titulo{
+    text-align: center;
     padding: 5px;
     font-variant: small-caps;
     letter-spacing: 2px;
@@ -115,15 +116,36 @@ body{
     justify-content: center;
     align-items: center;
     min-width: 90%;
-    min-height: 400px;
+    min-height:300px;
 }
 
 .image-qrcode{
     border-radius: 20px;
-    
+    opacity: 0;
     min-width: 250px;
     min-height: 250px;
+    transition: 2s;
+}
 
+.qrcode-appear{
+    animation: appear 2s ease-in;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 388px){
+    .main{
+        min-width: 100vw;
+        min-height: 100vh;
+        border-radius: 0px;
+    }
 }
 
 

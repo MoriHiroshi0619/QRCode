@@ -8,7 +8,10 @@ function GerarQRcode(){
     console.log(inputUsuario);
     let GoogleChartAPI = 'https://chart.googleapis.com/chart?cht=qr&chs=250x250&chld=H&choe=UTF-8&chl=';
     let QRCodeContent = GoogleChartAPI + encodeURIComponent(inputUsuario);
-    document.querySelector('#QRCodeImage').src = QRCodeContent;
+    let imageQRcode = document.querySelector('#QRCodeImage');
+    imageQRcode.src = QRCodeContent;
+    imageQRcode.classList.add('.qrcode-appear');
+    imageQRcode.style.opacity = 1;
     console.log(QRCodeContent);
 }
 
