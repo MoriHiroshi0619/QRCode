@@ -1,12 +1,15 @@
 let btsGerar = document.querySelector('.bts-link');
 
-btsGerar.addEventListener('click', GerarQRcode());
+btsGerar.addEventListener('click', GerarQRcode);
 
 function GerarQRcode(){
+    console.log("apertado foi então funciona seu filho da puta!!!");
     let inputUsuario = document.querySelector('#link').value;
-    let GoogleChartAPI = 'https://chart.googleapis.com/chart?cht=qr&chs=250x250&chld=H&chl=';
+    console.log(inputUsuario);
+    let GoogleChartAPI = 'https://chart.googleapis.com/chart?cht=qr&chs=250x250&chld=H&choe=UTF-8&chl=';
     let QRCodeContent = GoogleChartAPI + encodeURIComponent(inputUsuario);
     document.querySelector('#QRCodeImage').src = QRCodeContent;
+    console.log(QRCodeContent);
 }
 
 /*
