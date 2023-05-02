@@ -1,6 +1,10 @@
+let btsGerar = document.querySelector('.bts-link');
+
+btsGerar.addEventListener('click', GerarQRcode());
+
 function GerarQRcode(){
     let inputUsuario = document.querySelector('#link').value;
-    let GoogleChartAPI = 'https://chart.googleapis.com/chart?cht=qr&chs=500x500&chl=';
+    let GoogleChartAPI = 'https://chart.googleapis.com/chart?cht=qr&chs=250x250&chld=H&chl=';
     let QRCodeContent = GoogleChartAPI + encodeURIComponent(inputUsuario);
     document.querySelector('#QRCodeImage').src = QRCodeContent;
 }

@@ -115,7 +115,10 @@ body{
     min-height: 400px;
 }
 
-
+.image-qrcode{
+    min-width: 500px;
+    min-height: 500px;
+}
 
 
 
