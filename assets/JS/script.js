@@ -1,6 +1,5 @@
 function GerarQRcode(){
     let inputUsuario = document.querySelector('#link').value;
-    console.log(inputUsuario);
     let GoogleChartAPI = 'https://chart.googleapis.com/chart?cht=qr&chs=500x500&chld=H&chl=';
     let QRCodeContent = GoogleChartAPI + encodeURIComponent(inputUsuario);
     document.querySelector('#QRCodeImage').src = QRCodeContent;

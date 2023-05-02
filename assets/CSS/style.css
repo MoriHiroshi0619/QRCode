@@ -4,7 +4,7 @@
 
 
 :root{
-    --coe01: #034159;
+    --coe01: #012030;
     --cor02: #025951;
     --cor03: #02735E;
     --cor04: #038C3E;
@@ -16,13 +16,105 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Ysabeau', sans-serif;
+    border: 1px solid red;
 }
 
 body{
     min-width: 100vw;
     min-height: 100vh;
     background-image: linear-gradient(190deg, var(--cor02), var(--cor04));
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.main{
+    background-color: var(--coe01);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.752);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.titulo{
+    padding: 5px;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    background-image: linear-gradient(90deg, var(--cor05), var(--cor04), var(--cor03), var(--cor02), var(--cor03), var(--cor04), var(--cor05));
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: title 10s ease-in-out infinite;
+}
+
+@keyframes title {
+    0%, 100%{
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input-link{
+    background-color: transparent;
+    border: 2px solid var(--cor04);
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1.4rem;
+    color: #0CF25D;
+    outline: var(--cor05);
+    animation: input 6s linear infinite;
+}
+
+@keyframes input{
+    0%{
+        box-shadow: 0px 0px 0px var(--cor03);
+    }
+    50%{
+        box-shadow: 0px 0px 15px var(--cor05);
+    }
+    100%{
+        box-shadow: 0px 0px 0px var(--cor03);
+    }
+}
+
+.bts-link{
+    background-color: var(--cor04);
+    border: none;
+    height: 30px;
+    width: 50%;
+    border-radius: 20px;
+    transition: 1s;
+    font-size: 1rem;
+}
+
+.bts-link:hover{
+    transform: scale(1.1);
+    background-color: var(--cor05);
+}
+
+.div-qrcode{
+    min-width: 90%;
+    min-height: 400px;
+}
+
 
 
 
