@@ -14,6 +14,15 @@
         <h1 class="titulo">crie seu QRCode</h1>
         <div class="formulario">
             <textarea class="input-link" id="link" maxlength="500" rows="4" placeholder="cole aqui o link..."></textarea>
+            <div class="div-select">
+                <label for="chld">Selecione o nivel de correção</label>
+                <select id="chld">
+                    <option value="L" selected>Nenhum</option>
+                    <option value="Q">Baixo</option>
+                    <option value="M">Médio</option>
+                    <option value="H">Alto</option>
+                </select>
+            </div>
             <button class="bts-link">Gerar QRcode</button>
         </div>
         <div class="div-qrcode">

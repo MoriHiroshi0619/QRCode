@@ -112,6 +112,17 @@ body{
     background-color: var(--cor05);
 }
 
+.div-select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--cor05);
+}
+
+
+
+
 .div-qrcode{
     display: flex;
     justify-content: center;
@@ -119,6 +130,8 @@ body{
     min-width: 90%;
     min-height:300px;
 }
+
+
 
 .image-qrcode{
     border-radius: 20px;
