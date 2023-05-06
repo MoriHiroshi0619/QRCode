@@ -5,14 +5,12 @@ btsGerar.addEventListener('click', GerarQRcode);
 function GerarQRcode(){
     let inputUsuario = document.querySelector('#link').value;
     //console.log(inputUsuario);
-    let GoogleChartAPI = 'https://chart.googleapis.com/chart?cht=qr&chs=250x250&chld=L&choe=UTF-8&chl=';
-
     let correcao = document.querySelector('#chld');
     let chld = correcao.options[correcao.selectedIndex].value;
-    console.log(chld);
+
+    let GoogleChartAPI = `https://chart.googleapis.com/chart?cht=qr&chs=250x250&chld=${chld}&choe=UTF-8&chl=`;
 
     let QRCodeContent = GoogleChartAPI + encodeURIComponent(inputUsuario);
-
 
     let imageQRcode = document.querySelector('#QRCodeImage');
     imageQRcode.src = QRCodeContent;
